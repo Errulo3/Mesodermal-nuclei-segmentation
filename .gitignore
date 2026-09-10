@@ -1,0 +1,9 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+# Raw microscopy data
+data/raw/
+
+# Segmentation outputs
+results/labels/
