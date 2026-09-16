@@ -4,6 +4,8 @@ __pycache__/
 
 # Raw microscopy data
 data/raw/
+data/embryo_masks/
 
-# Segmentation outputs
+# Analysis outputs
 results/labels/
+results/vnc_distance/
