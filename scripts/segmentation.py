@@ -112,12 +112,12 @@ for idx, filename in enumerate(files_to_process, 1):
         img = tifffile.imread(img_path)
         print(f"  📐 Image shape: {img.shape}")
         
-        # Merge channels 1 and 2 (indices 1 and 2)
+        # Merge Elav (index 1) and Mef2 (index 2) channels
         if len(img.shape) >= 4 and img.shape[1] >= 3:
-            ch1 = img[:, 1, :, :]  # Channel 1 (index 1)
-            ch2 = img[:, 2, :, :]  # Channel 2 (index 2)
+            ch1 = img[:, 1, :, :]  # Elav
+            ch2 = img[:, 2, :, :]  # Mef2
             merged = (ch1.astype(np.float32) + ch2.astype(np.float32)) / 2
-            print(f"  🔄 Merged channels 1 & 2")
+            print(f"  🔄 Merged Elav (ch 1) & Mef2 (ch 2)")
         else:
             print(f"  ⚠️ Image doesn't have 3+ channels, using first channel")
             if len(img.shape) >= 4:
