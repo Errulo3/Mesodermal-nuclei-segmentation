@@ -6,15 +6,14 @@ import numpy as np
 from cellpose import models
 from skimage import exposure
 import time
-
-# ========== PATHS ==========
 from pathlib import Path
 
+# ========== PATHS ==========
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 MODEL_FILE = BASE_DIR / "models" / "cellpose_nuclei_model"
 input_folder = BASE_DIR / "data" / "raw"
-labels_folder = BASE_DIR / "results" / "labels"
+labels_folder = BASE_DIR / "results" / "labels_raw"
 
 labels_folder.mkdir(parents=True, exist_ok=True)
 
