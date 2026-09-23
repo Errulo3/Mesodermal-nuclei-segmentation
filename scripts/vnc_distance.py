@@ -25,11 +25,11 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Input: Cellpose nuclear labels produced by the segmentation pipeline
-labels_raw_folder = BASE_DIR / "results" / "labels"
+labels_raw_folder = BASE_DIR / "results" / "labels_raw"
 
 # Input: binary embryo masks used to identify labels overlapping the GFP-positive tissue
 # Place these masks in this folder and name them: mask-{base_name}.tif
-binary_masks_folder = BASE_DIR / "data" / "embryo_masks"
+binary_masks_folder = BASE_DIR / "results" / "binary_masks"
 
 # Output: VNC masks, checkpoints, manual selections, and distance reports
 vnc_output_folder = BASE_DIR / "results" / "vnc_distance"
